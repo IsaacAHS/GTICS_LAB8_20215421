@@ -46,7 +46,7 @@ public class EstudianteController {
         }
     }
     //CREAR
-    @PostMapping(value = {"", "/"})
+    @PostMapping(value = {"/crear", "/"})
     public ResponseEntity<HashMap<String, Object>> guardarEstudiante(
             @RequestBody Estudiante estudiante,
             @RequestParam(value = "fetchId", required = false) boolean fetchId) {
@@ -103,7 +103,7 @@ public class EstudianteController {
         }
     }
     //DELETE
-    @DeleteMapping("")
+    @DeleteMapping("/delete")
     public ResponseEntity<HashMap<String, Object>> borrar(@RequestParam("id") String idStr){
 
         try{
